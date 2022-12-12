@@ -1,0 +1,120 @@
+/* BREAKPOINT XL */
+@media (max-width: 1200px) {
+    .search__input {
+        display: none;
+    }
+
+    .search__icon {
+        display: none;
+    }
+}
+
+/* BREAKPOINT XL */
+@media (max-width: 992px) {
+    .services-row {
+        flex-direction: column; 
+    }
+
+    .services-card {
+        padding: 5rem 5rem;
+        text-align: center;
+        min-width: 50rem;
+        background: #F9F1FE;
+        border-radius: 1.5rem;
+        -webkit-transition: 0.3s all ease-in-out;
+        transition: 0.3s all ease-in-out;
+    }
+
+    .specialist-card {
+        min-width: 50rem;
+        margin-bottom: 3rem;
+    }
+
+    .specialist-row {
+        flex-direction: column;
+    }
+
+    .contact__number {
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+    }
+}
+/* BREAKPOINT XL */
+@media (max-width: 720px) {
+    .nav {
+        display: none;
+    }
+
+    .specialist-row {
+        flex-direction: column;
+    }
+
+    .footer-row {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        min-width: 40rem;
+        margin-bottom: 5rem;
+    }
+    .contact{
+        min-width: 40rem;
+        margin-bottom: 5rem;
+    }
+
+    .timetable {
+        min-width: 40rem;
+    }
+
+    // .nav {
+    //     text-align: center;
+    //     position: fixed;
+    //     top: 110px;
+    //     left: 0;
+    //     width: 180px;
+    //     background: rgba(225, 225, 225, 0.7);
+    //     border-radius: 0 10px 10px 0;
+    //     transform: translateX(-200%);
+    //     transition: .3s all ease-in-out;
+    // }
+
+    
+    #burger {
+        &._active {
+            background: blue;
+        }
+    }
+}
+
+/* BREAKPOINT XL */
+@media (max-width: 576px) {
+    .info {
+        min-width: 30rem;
+        margin-bottom: 5rem;
+    }
+    .contact{
+        min-width: 30rem;
+        margin-bottom: 5rem;
+    }
+
+    .timetable {
+        min-width: 30rem;
+    }
+
+    .newsletter__input {
+        padding: 1.2rem 0 1.5rem 2rem;
+        font-size: 1.0rem;
+        line-height: 1.0rem;
+    }
+    
+    .newsletter__btn {
+        padding: 0.5rem 1.2rem;
+        right: 2rem;
+        bottom: 8.4rem;
+    }
+
+    
+}

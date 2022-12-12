@@ -1,0 +1,320 @@
+.nav {
+    &__ul {
+        display: flex;
+        align-items: center;
+        gap: 2.4rem;
+    }
+    &__li {}
+    &__a {
+        @include text($font-base, 400, 1.6rem, 1.9em, $color-black);  
+        transition: $transition;
+        &::before {
+            opacity: 0;
+            content: '';
+            display: block;
+            position: absolute;
+            background-color: $color-primary;
+            height: 0.1rem;
+            width: 100%;
+            bottom: -0.3rem;
+            transition: $transition ;
+        }
+        &:hover {
+            color: $color-primary;
+            &::before {
+                opacity: 1;
+            }
+        }
+        &.nav__a_active {
+            color: $color-primary;
+            &::before {
+                opacity: 1;
+            }
+        }
+        position: relative;
+
+    }
+}
+
+.search {
+    position: relative;
+    &__input {
+        width: 100%;
+        background: $color-black;
+        border-radius: 5rem;   
+        border: 0; 
+        outline: 0;
+        padding: 1.3rem 1.8rem;
+        padding-right: 4rem;
+        @include text($font-base, 400, 1.4rem, 1.6em, $color-white);
+        &::placeholder {
+            color: rgba($color-white, 0.7);
+        }
+    } 
+    &__icon {
+        right: 2.5rem;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+}
+
+.logo {
+    @include text($font-base, 600, 2.4rem, 2.8rem, $color-dark);   
+}
+
+.slider {
+    &__item {
+        border-radius: 3rem;
+        img {
+            border-radius: 3rem;
+        }
+    }
+}
+
+#html .owl-theme {
+    .owl-dots {
+        height: 2rem;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        bottom: 2.5rem;
+        .owl-dot {
+            span {
+                background: $color-black;
+            }
+            &.active {
+                span {
+                    background: $color-primary;
+                }
+            }
+        }
+    }
+}
+
+.services {
+    margin-top: 11.1rem;
+}
+
+.services-row {
+    flex-wrap: nowrap;
+    gap: 3rem;
+}
+
+.services-card {
+    padding: 5rem 5rem;
+    text-align: center;
+    background: $color-secondary;
+    border-radius: 1.5rem;
+    transition: $transition;
+    &:hover {
+        background:$color-primary;
+    }
+    &__title {
+        @include text($font-base, 600, 2.4rem, 2.8rem, $color-dark);
+        padding: 2.7rem 0 1.7rem 0;
+    }
+
+    &__text {
+        @include text($font-base, 400, 1.6rem, 1.9rem, $color-gray);
+        margin-bottom: 1.7rem;
+    }
+
+    &__link {
+        @include text($font-base, 600, 1.6rem, 1.9rem, $color-primary);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 0.2rem;
+        &:hover {
+            color:$color-dark;
+        }
+    }
+}
+
+.title {
+    @include text($font-base, 700, 4.8rem, 5.6rem, $color-dark);
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.desc  {
+    @include text($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+    text-align: center;
+    margin-bottom: 12.3rem;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.specialist {
+    margin-top: 11.1rem;
+}
+
+.specialist-row {
+}
+
+.specialist-card {
+    padding: 4.4rem 3.9rem 3.3rem 3.8rem;
+    background: $color-secondary;
+    border-radius: 2rem;
+    &__text {
+        margin-top: 3.5rem;
+        @include text($font-base, 400, 1.6rem, 1.9rem, $color-gray);
+    }
+
+    &__btn {
+        margin-top: 2.8rem;
+        display: block;
+        padding: 1.1rem 4.9rem;
+        background: $color-primary;
+        border-radius: 5rem;
+        border: 0;
+        outline: 0;
+    }
+
+    &__a { 
+        @include text($font-base, 600, 2rem, 2.3rem, $color-secondary);
+    }
+}
+.specialist-card-header {
+    display: flex;
+    align-items: center;
+    gap: 1.3rem;
+    
+    &__titles {
+    }
+
+    &__title {
+        @include text($font-base, 600, 2rem, 2.3rem, $color-dark);
+    }
+
+    &__subtitle {
+        @include text($font-base, 400, 1.6rem, 1.9rem, $color-gray);
+    }
+}
+
+.specialist-card__image {
+    border-radius: 50%;
+}
+
+.newsletter {
+    margin-top: 13.9rem;
+		&__title {
+            padding: 7.8rem 0 4.7rem 0;
+            @include text($font-base, 700, 3.6rem, 4.2rem, $color-white);
+            text-align: center;
+		}
+
+		&__form {
+            position: relative;
+		}
+
+		&__input {    
+            width: 100%;
+            background: $color-secondary;
+            border-radius: 5rem;
+            border: 0;
+            outline: 0;
+            padding: 2rem 0 2.5rem 3.1rem;
+            padding-right: 18rem;
+            @include text($font-base, 400, 1.6rem, 1.9rem, $color-black);
+            margin-bottom: 8.2rem;
+            &::placeholder {
+                color: $color-four;}
+		}
+
+        &__btn {
+            position: absolute;
+            padding: 1rem 2.4rem;
+            background: $color-primary;
+            border-radius: 2.2rem;
+            border: 0;
+            outline: 0;
+            right: 3rem;
+            bottom: 9.3rem;
+        }
+
+        &__link {
+            @include text($font-base, 600, 2rem, 2.3rem, $color-white);
+        }
+}
+
+.newsletter-row {
+    background: $color-thrid;
+    border-radius: 1rem;
+}
+
+.footer {
+    margin-top: 13.1rem;
+    padding: 10.6rem 0 8.1rem 2rem;
+    background: $color-secondary;
+}
+
+.footer-row {
+    display: flex;
+    align-items: start;
+}
+
+.info {
+
+		&__title {
+            @include text($font-base, 600, 2.4rem, 2.8rem, $color-dark);
+		}
+
+        &__description {
+            margin-top: 2.6rem;
+            @include text($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+        }
+}
+
+
+.contact {
+
+        &__address {
+            margin-bottom: 3.7rem;
+        }
+
+		&__title {
+            @include text($font-base, 600, 2rem, 2.3rem, $color-dark);
+		}
+
+		&__description {
+            margin-top: 0.9rem;
+            @include text($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+		}
+
+        &__telephone {
+            margin-bottom: 3.7rem;
+		}
+
+        &__number {
+            display: flex;
+            gap: 1.6rem;
+        }
+
+		&__email {
+
+		}
+}
+
+.timetable {
+
+    &__title {
+        margin-bottom: 1.7rem;
+        @include text($font-base, 600, 2rem, 2.3rem, $color-dark);
+    }
+
+    &__description {
+        margin-bottom: 1.5rem;
+        @include text($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+    }
+}
+
+#burger {
+    display: none;
+}
+
