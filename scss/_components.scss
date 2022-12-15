@@ -52,7 +52,7 @@
         }
     } 
     &__icon {
-        right: 2.5rem;
+        right: 1.5rem;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
@@ -96,20 +96,18 @@
     margin-top: 11.1rem;
 }
 
-.services-row {
-    flex-wrap: nowrap;
-    gap: 3rem;
+.services-header {
+    flex-direction: column;
+    padding: 0 0 12.3rem 0;
 }
 
 .services-card {
-    padding: 5rem 5rem;
+    padding: 4.6rem 2.6rem;
     text-align: center;
     background: $color-secondary;
     border-radius: 1.5rem;
     transition: $transition;
-    &:hover {
-        background:$color-primary;
-    }
+
     &__title {
         @include text($font-base, 600, 2.4rem, 2.8rem, $color-dark);
         padding: 2.7rem 0 1.7rem 0;
@@ -126,35 +124,25 @@
         justify-content: center;
         align-items: center;
         gap: 0.2rem;
-        &:hover {
-            color:$color-dark;
+    }
+
+    &:hover {
+        background:$color-primary;
+        .services-card__title, 
+        .services-card__text,
+        .services-card__link {
+            color: $color-white
         }
     }
-}
-
-.title {
-    @include text($font-base, 700, 4.8rem, 5.6rem, $color-dark);
-    text-align: center;
-    margin-bottom: 7rem;
-}
-
-.desc  {
-    @include text($font-base, 400, 1.6rem, 1.9rem, $color-dark);
-    text-align: center;
-    margin-bottom: 12.3rem;
-}
-
-.row {
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .specialist {
     margin-top: 11.1rem;
 }
 
-.specialist-row {
+.specialist-header {
+    flex-direction: column;
+    padding: 0 0 12.3rem 0;
 }
 
 .specialist-card {
@@ -174,19 +162,28 @@
         border-radius: 5rem;
         border: 0;
         outline: 0;
+        transition: $transition;
+
+        &:hover {
+            outline: 1px solid $color-primary;
+            background: $color-secondary;
+        }
     }
 
-    &__a { 
+    &__link { 
         @include text($font-base, 600, 2rem, 2.3rem, $color-secondary);
+        transition: $transition;
+
+        &:hover {
+            color: $color-primary;
+        }
     }
 }
+
 .specialist-card-header {
     display: flex;
     align-items: center;
     gap: 1.3rem;
-    
-    &__titles {
-    }
 
     &__title {
         @include text($font-base, 600, 2rem, 2.3rem, $color-dark);
@@ -201,15 +198,42 @@
     border-radius: 50%;
 }
 
+.title {
+    @include text($font-base, 700, 4.8rem, 5.6rem, $color-dark);
+    text-align: center;
+    margin-bottom: 7rem;
+}
+
+.desc  {
+    @include text($font-base, 400, 1.6rem, 1.9rem, $color-dark);
+    text-align: center;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pb-3 {
+    padding-bottom: 3rem;
+}
+
 .newsletter {
+    padding: 8rem 0;
     margin-top: 13.9rem;
+    background: $color-thrid;
+    border-radius: 1rem;
+    flex-direction: column;
+
 		&__title {
-            padding: 7.8rem 0 4.7rem 0;
-            @include text($font-base, 700, 3.6rem, 4.2rem, $color-white);
+            margin-bottom: 4.7rem ;
             text-align: center;
+            @include text($font-base, 700, 3.6rem, 4.2rem, $color-white);
 		}
 
 		&__form {
+            padding: 0;
             position: relative;
 		}
 
@@ -222,7 +246,6 @@
             padding: 2rem 0 2.5rem 3.1rem;
             padding-right: 18rem;
             @include text($font-base, 400, 1.6rem, 1.9rem, $color-black);
-            margin-bottom: 8.2rem;
             &::placeholder {
                 color: $color-four;}
 		}
@@ -234,28 +257,29 @@
             border-radius: 2.2rem;
             border: 0;
             outline: 0;
-            right: 3rem;
-            bottom: 9.3rem;
+            right: 1.5rem;
+            top: 50%;
+            transform: translateY(-50%)
         }
 
         &__link {
             @include text($font-base, 600, 2rem, 2.3rem, $color-white);
+
+            &:hover {
+                color: $color-thrid;
+            }
         }
 }
 
-.newsletter-row {
-    background: $color-thrid;
-    border-radius: 1rem;
-}
-
 .footer {
+    display: flex;
+    justify-content: center;
     margin-top: 13.1rem;
     padding: 10.6rem 0 8.1rem 2rem;
     background: $color-secondary;
 }
 
 .footer-row {
-    display: flex;
     align-items: start;
 }
 
@@ -276,6 +300,7 @@
 
         &__address {
             margin-bottom: 3.7rem;
+            
         }
 
 		&__title {
@@ -299,6 +324,14 @@
 		&__email {
 
 		}
+
+        &__link {
+            color: $color-primary;
+
+            &:hover {
+                color: blue;
+            }
+        }
 }
 
 .timetable {
@@ -314,7 +347,5 @@
     }
 }
 
-#burger {
-    display: none;
-}
+
 

@@ -1,37 +1,42 @@
 /* BREAKPOINT XL */
 @media (max-width: 1200px) {
-    .search__input {
-        display: none;
-    }
 
-    .search__icon {
-        display: none;
-    }
 }
 
 /* BREAKPOINT XL */
 @media (max-width: 992px) {
-    .services-row {
-        flex-direction: column; 
+    .services {
+        margin-top: 5rem;
     }
 
-    .services-card {
-        padding: 5rem 5rem;
-        text-align: center;
-        min-width: 50rem;
-        background: #F9F1FE;
-        border-radius: 1.5rem;
-        -webkit-transition: 0.3s all ease-in-out;
-        transition: 0.3s all ease-in-out;
+    .title {
+        margin-bottom: 4rem;
     }
 
-    .specialist-card {
-        min-width: 50rem;
-        margin-bottom: 3rem;
+    .services-header {
+        padding: 0 0 5rem 0;
     }
 
-    .specialist-row {
-        flex-direction: column;
+    .specialist {
+        margin-top: 5rem;
+    }
+
+    .specialist-header {
+        padding: 0 0 5rem 0;
+    }
+
+    .newsletter {
+        margin-top: 5rem;
+    }
+
+
+    .col-md-4 {
+        padding-top: 15px;
+        padding-bottom: 15px;
+    }
+
+    .contact {
+        padding-top: 0;
     }
 
     .contact__number {
@@ -39,82 +44,68 @@
         flex-direction: column;
         gap: 0;
     }
+
+    .footer {
+        margin-top: 5rem;
+        padding: 3rem 0 5rem 0rem;
+    }
+    .footer-row {
+        text-align: center;
+     }
 }
+
 /* BREAKPOINT XL */
-@media (max-width: 720px) {
+@media (max-width: 768px) {
     .nav {
         display: none;
     }
 
-    .specialist-row {
-        flex-direction: column;
+    .search__input {
+        
     }
 
-    .footer-row {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
+    .search__icon {
 
-    .info {
-        min-width: 40rem;
-        margin-bottom: 5rem;
-    }
-    .contact{
-        min-width: 40rem;
-        margin-bottom: 5rem;
-    }
-
-    .timetable {
-        min-width: 40rem;
-    }
-
-    // .nav {
-    //     text-align: center;
-    //     position: fixed;
-    //     top: 110px;
-    //     left: 0;
-    //     width: 180px;
-    //     background: rgba(225, 225, 225, 0.7);
-    //     border-radius: 0 10px 10px 0;
-    //     transform: translateX(-200%);
-    //     transition: .3s all ease-in-out;
-    // }
-
-    
-    #burger {
-        &._active {
-            background: blue;
-        }
     }
 }
 
 /* BREAKPOINT XL */
 @media (max-width: 576px) {
+    .title {
+        @include text($font-base, 700, 4.0rem, 4.8rem, $color-dark);
+    }
+ 
     .info {
-        min-width: 30rem;
         margin-bottom: 5rem;
     }
     .contact{
-        min-width: 30rem;
         margin-bottom: 5rem;
     }
 
-    .timetable {
-        min-width: 30rem;
-    }
-
-    .newsletter__input {
-        padding: 1.2rem 0 1.5rem 2rem;
-        font-size: 1.0rem;
-        line-height: 1.0rem;
-    }
+    .newsletter {
     
-    .newsletter__btn {
-        padding: 0.5rem 1.2rem;
-        right: 2rem;
-        bottom: 8.4rem;
-    }
-
+            &__title {
+                margin-bottom: 4.7rem ;
+                @include text($font-base, 700, 2.8rem, 3.6rem, $color-white);
+            }
     
+            &__form {
+                max-width: 90%;
+            }
+    
+            &__input {    
+                padding: 1rem 0 1.2rem 1.5rem;
+                padding-right: 12rem;
+                @include text($font-base, 400, 1.6rem, 1.9rem, $color-black);
+            }
+    
+            &__btn {
+                padding: 0.5rem 1.2rem;
+                right: 0.8rem;
+            }
+    
+            &__link {
+                @include text($font-base, 600, 1.6rem, 1.9rem, $color-white);
+            }
+    }
 }
