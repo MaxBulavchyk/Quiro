@@ -466,7 +466,10 @@ html {
     text-align: center; } }
 /* BREAKPOINT XL */
 @media (max-width: 768px) {
-  .nav {
+  .search__input {
+    display: none; }
+
+  .search__icon {
     display: none; } }
 /* BREAKPOINT XL */
 @media (max-width: 576px) {

@@ -59,6 +59,12 @@
     }
 }
 
+@media (max-width: 768px) {
+    .search {
+        display: none;
+    }
+}
+
 .logo {
     @include text($font-base, 600, 2.4rem, 2.8rem, $color-dark);   
 }
