@@ -6,8 +6,6 @@ $('.owl-carousel').owlCarousel({
 });
 
 function navToggle() {
-    var navToggleBtn = document.getElementById("burger");
-    var navToggleUl = document.getElementById("nav");
-    navToggleBtn.classList.toggle("_active");
-    navToggleUl.classList.toggle("_active");
+    var navToggleNav = document.getElementById("nav");
+    navToggleNav.classList.toggle("_active")
 }
