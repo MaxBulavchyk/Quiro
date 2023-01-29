@@ -15,14 +15,13 @@
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
 </head>
 
-<body>
-
+<body id="body" onclick="_overflow">
     <div class="container">
 
-        <header class="header">
+        <header id="home" class="header">
             <div class="row">
                 <div class="header__item col-4">
                     <a href="#" class="logo">
@@ -37,11 +36,11 @@
                     </div>
                     <nav id="nav" class="header-nav">
                         <ul class="header-nav__ul">
-                            <li class="header-nav__li"><a class="header-nav__a" href="#">Home</a></li>
-                            <li class="header-nav__li"><a class="header-nav__a" href="#">Service</a></li>
-                            <li class="header-nav__li"><a class="header-nav__a" href="#">Doctors</a></li>
-                            <li class="header-nav__li"><a class="header-nav__a" href="#">Gallery</a></li>
-                            <li class="header-nav__li"><a class="header-nav__a" href="#">Contact</a></li>
+                            <li class="header-nav__li"><a class="header-nav__a _active" onclick="navToggle()" href="#home">Home</a></li>
+                            <li class="header-nav__li"><a class="header-nav__a _active" onclick="navToggle()" href="#service">Service</a></li>
+                            <li class="header-nav__li"><a class="header-nav__a _active" onclick="navToggle()" href="#doctors">Doctors</a></li>
+                            <li class="header-nav__li"><a class="header-nav__a _active" onclick="navToggle()" href="#gallery">Gallery</a></li>
+                            <li class="header-nav__li"><a class="header-nav__a _active" onclick="navToggle()" href="#contact">Contact</a></li>
                         </ul>
                         <span id="icon-close" onclick="navToggle()" class="material-icons">
                             close
@@ -56,7 +55,8 @@
                 </div>
             </div>
         </header>
-        <div class="slider">
+
+        <div id="gallery" class="slider">
             <div class="owl-carousel owl-theme">
                 <div class="slider__item">
                     <img src="./image/slider-bg.jpg" alt="Bg">
@@ -72,8 +72,7 @@
 
 
 
-        <section class="services">
-
+        <section id="service" class="services">
             <div class="services-header row">
                 <div class="services__title title col-md-4">
                     Our Services
@@ -131,7 +130,7 @@
 
 
 
-        <section class="specialist">
+        <section id="doctors" class="specialist">
             <div class="specialist-header row">
                 <div class="specialist__title title col-md-8">
                     Choose Your Specialist Doctor
@@ -278,11 +277,7 @@
                     </div>
                 </div>
             </div>
-
         </section>
-
-
-
 
         <section class="newsletter row">
                 <div class="newsletter__title col-md-5">
@@ -293,10 +288,11 @@
                     <button class="newsletter__btn">
                         <a class="newsletter__link" href="#">Subscribe</a>
                     </button>
+                </div>
         </section>
     </div>
 
-    <div class="footer">
+    <div id="contact" class="footer">
         <div class="container footer-row row">
             <div class="info col-md-5">
                 <div class="info__title">Quiro Diagnostic Center</div>
@@ -321,7 +317,7 @@
                             <a class="contact__link" href="tel:(07)40127246">(07)40127246</a>
                         </div>
                         <div class="contact__description">
-                            <a href="tel:(02)67566577">(02)67566577</a>
+                            <a class="contact__link" href="tel:(02)67566577">(02)67566577</a>
                         </div>
                         </div>
                 </div>
@@ -332,7 +328,6 @@
                     </div>
                 </div>
             </div>
-
             <div class="timetable col-md-3">
                 <div class="timetable__title">Opening Hour</div>
                 <p class="timetable__description">Thursday: 9am - 6pm</p>
@@ -350,6 +345,7 @@
         </script>
     <script src="./plagins/owl.carousel.min.js"></script>
     <script src="script.js"></script>
+
 </body>
 
 </html>

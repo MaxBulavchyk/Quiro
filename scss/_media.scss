@@ -3,50 +3,49 @@
     .header {
         .header__burger {
             display: block;
+            position: absolute;
+            right: 50%;
         }
 
         .header-nav {
             position: fixed;
             z-index: 5;
             width: 100%;
+            height: 100%;
             left: 0;
             top: 0;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.8);
+            background: rgba(0, 0, 0, 0.95);
             transform: translateY(-150%);
             transition: $transition;
-    
+
             .material-icons {
-            display: block;
-            position: absolute;
-            top: 40px;
-            right: 20px;
+                display: block;
+                position: absolute;
+                top: 40px;
+                right: 20px;
             }
-    
+
             .header-nav__ul {
-                height: 100%;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
+                height: 100%;
+                gap: 3rem;
             }
-    
+
             .header-nav__a {
-                font-size: 18px;
+                font-size: 3rem;
+                color: $color-white;
             }
-    
-            .header-nav_active {
+
+            &._active {
                 transform: translateY(0);
             }
-        }    
+        }
     }
-    .search {
-        display: none;
-    }
-
-
 }
 
-/* BREAKPOINT XL */
+/* BREAKPOINT LG */
 @media (max-width: 992px) {
     .services {
         margin-top: 5rem;
@@ -72,7 +71,6 @@
         margin-top: 5rem;
     }
 
-
     .col-md-4 {
         padding-top: 15px;
         padding-bottom: 15px;
@@ -94,61 +92,66 @@
     }
     .footer-row {
         text-align: center;
-     }
+    }
 }
 
-/* BREAKPOINT XL */
+/* BREAKPOINT MD */
 @media (max-width: 768px) {
-    .nav {
+    .header__burger {
+        right: 0;
+    }
+    .logo {
+        @include text($font-base, 600, 2.4rem, 2.8rem, $color-dark);
+    }
+    .slider {
+        &__item {
+            border-radius: 3rem;
+            img {
+                border-radius: 3rem;
+            }
+        }
+    }
+    .search {
         display: none;
     }
-
-    // .search__input {
-    //     display: none;
-    // }
-
-    // .search__icon {
-    //     display: none;
-    // }
 }
 
-/* BREAKPOINT XL */
+/* BREAKPOINT SM */
 @media (max-width: 576px) {
     .title {
-        @include text($font-base, 700, 4.0rem, 4.8rem, $color-dark);
+        @include text($font-base, 700, 4rem, 4.8rem, $color-dark);
     }
- 
+
     .info {
         margin-bottom: 5rem;
     }
-    .contact{
+    .contact {
         margin-bottom: 5rem;
     }
 
     .newsletter {
-    
-            &__title {
-                margin-bottom: 4.7rem ;
-                @include text($font-base, 700, 2.8rem, 3.6rem, $color-white);
-            }
-    
-            &__form {
-                max-width: 90%;
-            }
-    
-            &__input {    
-                padding: 1rem 0 1.2rem 1.5rem;
-                padding-right: 12rem;
-                @include text($font-base, 400, 1.6rem, 1.9rem, $color-black);
-            }
-    
-            &__btn {
-                padding: 0.5rem 1.2rem;
-                right: 0.8rem;
-            }
-    
-            &__link {
-                @include text($font-base, 600, 1.6rem, 1.9rem, $color-white);
-            }
+        &__title {
+            margin-bottom: 4.7rem;
+            @include text($font-base, 700, 2.8rem, 3.6rem, $color-white);
+        }
+
+        &__form {
+            max-width: 90%;
+        }
+
+        &__input {
+            padding: 1rem 0 1.2rem 1.5rem;
+            padding-right: 12rem;
+            @include text($font-base, 400, 1.6rem, 1.9rem, $color-black);
+        }
+
+        &__btn {
+            padding: 0.5rem 1.2rem;
+            right: 0.8rem;
+        }
+
+        &__link {
+            @include text($font-base, 600, 1.6rem, 1.9rem, $color-white);
+        }
     }
 }
