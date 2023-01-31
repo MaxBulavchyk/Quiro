@@ -3,8 +3,9 @@
     .header {
         .header__burger {
             display: block;
-            position: absolute;
-            right: 50%;
+            // position: absolute;
+            // right: 20px;
+            // top: 10px;
         }
 
         .header-nav {
@@ -41,6 +42,9 @@
             &._active {
                 transform: translateY(0);
             }
+        }
+        .search {
+            display: none;
         }
     }
 }
@@ -110,9 +114,6 @@
                 border-radius: 3rem;
             }
         }
-    }
-    .search {
-        display: none;
     }
 }
 

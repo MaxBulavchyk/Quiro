@@ -398,9 +398,7 @@ html {
 /* BREAKPOINT XL */
 @media (max-width: 1200px) {
   .header .header__burger {
-    display: block;
-    position: absolute;
-    right: 50%; }
+    display: block; }
   .header .header-nav {
     position: fixed;
     z-index: 5;
@@ -436,7 +434,9 @@ html {
       color: #ffffff; }
     .header .header-nav._active {
       -webkit-transform: translateY(0);
-              transform: translateY(0); } }
+              transform: translateY(0); }
+  .header .search {
+    display: none; } }
 /* BREAKPOINT LG */
 @media (max-width: 992px) {
   .services {
@@ -495,10 +495,7 @@ html {
   .slider__item {
     border-radius: 3rem; }
     .slider__item img {
-      border-radius: 3rem; }
-
-  .search {
-    display: none; } }
+      border-radius: 3rem; } }
 /* BREAKPOINT SM */
 @media (max-width: 576px) {
   .title {
